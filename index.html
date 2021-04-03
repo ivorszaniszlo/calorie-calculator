@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalóriaszámláló</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+		#toast-container {
+		  top: 10% !important;
+		  right: auto !important;
+		  left:50%;
+		}
+		.toast-success {
+			color: #155724;
+			background-color: #d4edda;
+			border-color: #c3e6cb;        
+		 }
+	</style>
+
+  </head>
+  <body> 
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="nav-wrapper blue">
+        <div class="container">
+          <a href="#" class="brand-logo left">Kalóriaszámláló</a>
+          <ul id="nav-mobile" class="right">
+            <li><a href="#" class="clear-btn btn-small blue lighten-3">Törlés</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+		 <span class="card-title"><strong>ÉTEL/ITAL KIVÁLASZTÁSA</strong></span>
+		 <span class="">Válassza ki a listából az elfogyasztott ételt vagy italt (1 adag 20 dkg-nak felel meg).</span>
+          <!-- Form -->
+          <div class="row">
+            <form class="col s12">
+				<div class="row">
+					<div class="input-field col s12 m6">
+						<label>Zöldségfélék</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select value="" class="browser-default btn-success select">
+							<option disabled selected>---- Válassz! ----</option>
+							<option name="barna rizs" value="122">12,5 dkg főtt, barna rizs</option>
+							<option name="brokkoli" value="70">1 adag brokkoli</option>
+							<option name="csemegeuborka" value="260">2 csemegeuborka</option>
+							<option name="cukkíni" value="60">1 adag cukkíni</option>
+							<option name="cékla" value="20">1 adag cékla</option>
+							<option name="fehér rizs" value="113">12,5 dkg főtt, fehér rizs</option>
+							<option name="gomba" value="65">1 adag gomba</option>
+							<option name="karfiol" value="56">1 adag karfiol</option>
+							<option name="kelbimbó" value="108">1 adag kelbimbó</option>
+							<option name="kelkáposzta" value="60">1 adag kelkáposzta</option>
+							<option name="konzervkukorica" value="60">10 dkg konzervkukorica</option>
+							<option name="krumplipüré" value="190">1 adag krumplipüré</option>
+							<option name="paradicsom" value="0.5">1 paradicsom</option>
+							<option name="párolt burgonya" value="180">1 adag párolt burgonya</option>
+							<option name="párolt répa" value="70" >1 adag párolt répa</option>
+							<option name="póréhagyma" value="84">1 adag póréhagyma</option>
+							<option name="reszelt répa öntettel" value="174">1 adag reszelt répa öntettel</option>
+							<option name="retek" value="72">10 dkg retek</option>
+							<option name="savanyú káposzta" value="56">1 adag savanyú káposzta</option>
+							<option name="spenót" value="70">1 adag spenót</option>
+							<option name="szárazbab" value="240">1 adag szárazbab</option>
+							<option name="szójacsíra" value="60">1 adag szójacsíra</option>
+							<option name="sült krumpli" value="548">1 adag sült krumpli</option>
+							<option name="tök" value="60">1 adag tök</option>
+							<option name="uborka" value="0">1 adag uborka</option>
+							<option name="vegyes zöldség" value="138">1 adag vegyes zöldség</option>
+							<option name="vegyes, nyers zöldség" value="0.5">10 dkg vegyes, nyers zöldség</option>
+							<option name="zeller" value="50">1 adag zeller</option>
+							<option name="zöldbab" value="80">1 adag zöldbab</option>
+							<option name="zöldborsó" value="80">1 adag zöldborsó</option>
+							<option name="zöldsaláta" value="200">1 adag zöldsaláta, öntet nélkül</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					
+					<div class="input-field col s12 m6">
+						<label>Hús és hal</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select value="" class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="csirkemell" value="160">1 adag csirkemell</option>
+							<option name="hamburger" value="260">1 hamburger</option>
+							<option name="harcsa" value="102">1 adag harcsa</option>
+							<option name="kacsahús" value="400">1 adag kacsahús</option>
+                            <option name="kaszinótojás" value="189">1 kaszinótojás</option>
+                            <option name="marhahús(sovány)" value="180">1 adag sovány marhahús</option>
+							<option name="marhamáj" value="173">1 adag marhamáj</option>
+							<option name="nyúlhús" value="138">1 adag nyúlhús</option>
+							<option name="omlett" value="277">omlett 2 tojásból</option>
+							<option name="ponty" value="150">1 adag ponty</option>
+							<option name="pulykamell" value="284">1 adag pulykamell</option>
+							<option name="sertéshús" value="210">1 adag sertéshús</option>
+							<option name="sertésmáj" value="182">1 adag sertésmáj</option>
+							<option name="sonka" value="160">1 szelet sonka (5 dkg)</option>
+							<option name="szardínia" value="240">6 darab olajos szardínia</option>
+							<option name="tojás" value="66">1 tojás</option>
+							<option name="tonhal" value="335">1 adag natúr tonhal</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Tejtermék</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="joghurt (diétás)" value="44">1 0%-os joghurt</option>
+							<option name="joghurt (gyümölcsös)" value="100">1 gyümölcsös joghurt</option>
+							<option name="joghurt (natúr)" value="72">1 natúr joghurt</option>
+							<option name="juhtúró" value="140">1 adag juhtúró</option>
+							<option name="kefir" value="67">1 kefir</option>
+							<option name="krémtúró (gyümölcsös)" value="162">1 gyümölcsös krémtúró</option>
+							<option name="margarin" value="75">1 diónyi margarin</option>
+							<option name="sajt (félzsíros)" value="152">1 adag félzsíros sajt</option>
+							<option name="sajt (kockasajt)" value="73">1 darab kockasajt</option>
+							<option name="sajt (zsíros)" value="167">1 adag zsíros sajt</option>
+							<option name="tej (sovány)" value="74">1 pohár sovány tej</option>
+							<option name="tej (zsíros)" value="98">1 pohár tej</option>
+							<option name="túró" value="116">1 adag túró</option>
+							<option name="vaj" value="70">1 diónyi vaj</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Kenyérfélék és gabonák</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="gabonapehely (Corn Flakes)" value="385">10 dkg gabonapehely (Corn Flakes)</option>
+							<option name="kenyér (fehér)" value="120">1 szelet fehérkenyér</option>
+							<option name="kenyér (teljes)" value="40">1 szelet teljes kiörlésű kenyér</option>
+							<option name="kenyér (toast)" value="137">2 szelet toast-kenyér</option>
+							<option name="kétszersült" value="39">1 darab kétszersült</option>
+							<option name="müzliszelet" value="110">1 darab müzliszelet</option>
+							<option name="zabpehely" value="157">4 dkg zabpehely</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Édesség</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="csokikrém" value="350">1 adag csokikrém</option>
+							<option name="fagylalt" value="240">2 gombóc fagylalt</option>
+							<option name="gyümölcstorta" value="180">1 szelet gyümölcstorta</option>
+							<option name="palacsinta" value="160">1 palacsinta</option>
+							<option name="puding" value="240">1 puding</option>
+							<option name="teasütemény" value="120">3 darab édes teasütemény</option>
+							<option name="tiramisu" value="251">1 adag tiramisu</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Gyümölcs</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="alma" value="78">1 alma</option>
+							<option name="ananász" value="20">1 szelet ananász</option>
+							<option name="banán" value="135">1 banán</option>
+							<option name="cseresznye" value="77">1 maroknyi cseresznye</option>
+							<option name="datolya" value="25">1 datolya</option>
+							<option name="dió" value="100">5 darab dió</option>
+							<option name="eper" value="37">10 dkg eper</option>
+							<option name="füge" value="40">1 füge</option>
+							<option name="grapefruit" value="100">1 grapefruit</option>
+							<option name="görögdinnye" value="30">10 dkg görögdinnye</option>
+							<option name="kiwi" value="37">1 kiwi</option>
+							<option name="körte" value="91">1 körte</option>
+							<option name="mandarin" value="20">2 mandarin</option>
+							<option name="mazsola" value="324">10 dkg mazsola</option>
+							<option name="mogyoró" value="50">5 darab mogyoró</option>
+							<option name="narancs" value="40">1 narancs</option>
+							<option name="ringló" value="60">10 dkg ringló</option>
+							<option name="szilva" value="8">1 szilva</option>
+							<option name="szőlő" value="122">1 fürt szőlő</option>
+							<option name="őszibarack" value="69">1 őszibarack</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Nassolni való</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="briós" value="260">1 briós</option>
+                            <option name="chips" value="259">1 kis zacskó chips (45g)</option>
+                            <option name="étcsokoládé" value="159">1 szelet étcsokoládé</option>
+							<option name="kakaóscsiga" value="278">1 kakaóscsiga</option>
+							<option name="méz" value="73">1 evőkanál méz</option>
+							<option name="tejcsokoládé" value="152">1 szelet tejcsokoládé</option>
+						</select>
+					</div> <!-- /.row-->
+					
+					<div class="input-field col s12 m6">
+						<label>Italok</label>
+					</div>
+					<div class="input-field col s12 m6">
+						 <select class="browser-default select">
+							<option value="" disabled selected>---- Válassz! ----</option>
+							<option name="almalé" value="90">1 pohár almalé</option>
+							<option name="ananászlé" value="86">1 pohár ananászlé</option>
+							<option name="fehérbor" value="108">1 pohár fehérbor</option>
+							<option name="grapefruitlé" value="63">1 pohár grapefruitlé</option>
+							<option name="kávé" value="0">1 kávé, cukor nélkül</option>
+							<option name="kóla" value="148">1 dobozos kóla</option>
+							<option name="kóla (light)" value="0">1 dobozos kóla "Light"</option>
+							<option name="narancslé" value="63">1 pohár friss vagy 100%-os narancslé</option>
+							<option name="paradicsomlé" value="18">1 pohár paradicsomlé</option>
+							<option name="pezsgő" value="63">1 pohár pezsgő</option>
+							<option name="szőlőlé" value="102">1 pohár szőlőlé</option>
+							<option name="sör" value="140">1 dobozos sör</option>
+							<option name="tea" value="0">1 csésze tea</option>
+							<option name="turmix" value="230">1 turmix</option>
+							<option name="vodka (4cl)" value="100">1 vodka (4cl)</option>
+							<option name="vörösbor" value="93">1 pohár vörösbor</option>
+							<option name="whisky ( 8cl)" value="384">1 whisky ( 8cl)</option>
+						</select>
+					</div> <!-- /.row-->
+					
+             
+            </form>
+          </div>
+          <span class="card-title"><strong>ÉTEL/ITAL HOZZÁADÁSA</strong></span>
+		  <span class="">Adja meg a listánkban nem szereplő étel nevét és kalóriáját, majd adja hozzá a hozzáadás gombbal.</span>
+          <!-- Form -->
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input id="item-name" class="input" type="text" >
+                  <label for="item-name">Étel</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input id="item-calories" class="input" type="number" >
+                  <label for="item-calories">kalória</label>
+                </div>
+              </div> <!-- /.row-->
+              <div class="row">
+                <div class="col" style="width: 100%">
+                  <a id="add-btn" class="add-btn btn blue darken-3" title="Hozzáadás"><i class="material-icons center">add</i></a>
+                  <a class="update-btn btn orange" title="Frissítés"><i class="material-icons center">update</i></a>
+                  <a class="delete-btn btn red" title="Törlés"><i class="material-icons center">delete</i></a>    
+                  <a class="back-btn btn grey right" title="Vissza"><i class="material-icons left">arrow_back</i>Vissza</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+        </div> <!-- /.card-content-->
+      </div> <!-- /.card-->
+    </div>
+
+    <!-- Calorie Count -->
+    <h3 class="center">Összes kalória: <span class="total-calories">0</span></h3>
+    <!-- Item List -->
+    <div class="container">
+      <ul id="item-list" class="collection">
+        
+      </ul>
+    </div>
+  </main> 
+  
+    <!-- JQuery Minified -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+	
+	<script>
+	
+     $(document).on('change', '.select', function() {
+		let selectedValue = $(this).val();
+		let selectedName = $(this).find('option:selected').attr("name");
+		
+		const Item = function(id, name, calories) {
+			this.id = '';
+			this.name = selectedName;
+			this.calories = selectedValue;
+		}
+		
+		let selectedItem = new Item();
+		
+		localStorage.setItem('selectedItem', JSON.stringify(selectedItem));
+		
+		$(document).ready(function(){
+		let selected = JSON.parse(localStorage.getItem('selectedItem'));
+			if (selected != '') {
+				document.getElementById("add-btn").click();
+				  M.toast({
+					html: 'Hozzáadva',
+					classes: 'toast-success'
+				  });
+				localStorage.removeItem('selectedItem');
+			}
+		});	
+	});
+	
+    </script>
+
+	
+	
+  </body>
+</html>
