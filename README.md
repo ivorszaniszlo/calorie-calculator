@@ -1,6 +1,4 @@
-# Title
-
-Memory Game
+# CALORIE CALCULATOR
 
 ## Introduction
 
