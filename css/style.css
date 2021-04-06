@@ -1,20 +1,15 @@
 strong {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #toast-container {
-   .toast {
-    
+    top: 10% !important;
+    right: auto !important;
+    left: 50%;
+}
 
-      
-	 .success {
-        color: #155724;
-        background-color: #d4edda;
-        border-color: #c3e6cb;        
-      }
-
-  
-    }
-  }
-
-
+.toast-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
