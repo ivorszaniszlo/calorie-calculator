@@ -12,9 +12,9 @@ This is a calorie calculator. You are free to add items or select from a list.
 
 ## Technolgies
 
-Vanilla JS
-Materialize v1.0.0 
-JQuery 3.4.1
++ Vanilla JS
++ Materialize v1.0.0 
++ JQuery 3.4.1
 
 ## Setup
 
