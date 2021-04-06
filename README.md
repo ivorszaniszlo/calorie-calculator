@@ -1,10 +1,12 @@
-# Title
+# Calorie Calculator
 
-Memory Game
-
-## Introduction
+## General Info
 
 RAS project made for [Blikkrúzs](https://blikkruzs.blikk.hu/szolgaltatas/kalkulator/kaloriaszamlalo/dxvkrh0).
+
+## Screenhots
+
+![Calorie Calculator](./img/calorie-calculator-screenshot.jpg)
 
 ## Description
 
@@ -35,4 +37,4 @@ or just copy at all on your code playground (e.g. [jsfiddle](https://jsfiddle.ne
 
 ## License
 
-RingierAxelSpringer
+Ringier Axel Springer
